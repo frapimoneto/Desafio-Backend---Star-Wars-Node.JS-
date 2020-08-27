@@ -1,0 +1,47 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add express
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\platform-tools;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Francisco\AppData\Roaming\npm;C:\src\flutter\bin;C:\Users\Francisco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Francisco\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\Program Files\platform-tools\adb;C:\Program Files\MongoDB\Server\4.4\bin;
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Francisco\Desktop\B2W\package.json: Unexpected token s in JSON at position 128
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "B2W",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "nodemon --watch "src/" --exec \"ts-node src/entry.ts\" -e ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "nodemon": "^2.0.4",
+      "ts-node": "^9.0.0",
+      "typescript": "^4.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
