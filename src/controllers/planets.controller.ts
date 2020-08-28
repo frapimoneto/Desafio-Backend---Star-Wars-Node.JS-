@@ -22,18 +22,43 @@ async function CreatePlanet({ name, climate, movie_screenings, terrain }: Create
     });
 }
 
-async function ListPlanet() {
-  return await Planet.find();
-  // .then((data) => {
-  //   return ({data});
-  // })
-  // .catch((error: Error) => {
-  //   throw error;
-  // });
+async function ListPlanets() {
+  try {
+    return await Planet.find();
+  } catch (error) {
+    return error;
+  }
+};
+
+async function ListPlanetId(id: string) {
+  try {
+    return await Planet.findById(id);
+  } catch (error) {
+    return error;
+  }
+};
+
+async function ListPlanetName(name: string) {
+  try {
+    return await Planet.findOne({name: name});
+  } catch (error) {
+    return error;
+  }
+};
+
+async function DeletePlanet(id: string) {
+  try {
+    return await Planet.findByIdAndRemove(id);
+  } catch (error) {
+    return error;
+  }
 };
 
 
 export default {
   CreatePlanet,
-  ListPlanet
+  ListPlanets,
+  ListPlanetId,
+  ListPlanetName,
+  DeletePlanet
 };

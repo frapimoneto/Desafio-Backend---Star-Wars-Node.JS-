@@ -15,9 +15,17 @@ export default ({ app }: TRoutesInput) => {
   });
 
   app.get('/api/planets', async ( request: Request, response: Response) => {
-    // const name= request.body.name;
-    // console.log(name);
-    const planet = await PlanetController.ListPlanet();
+    const planet = await PlanetController.ListPlanets();
     return response.send(planet);
-  })
+  });
+
+  app.get('/api/planets/:id', async ( request: Request, response: Response) => {
+    const planet = await PlanetController.ListPlanetId(request.params.id);
+    return response.send(planet);
+  });
+
+  app.delete('/api/planets/:id', async ( request: Request, response: Response) => {
+    const planet = await PlanetController.DeletePlanet(request.params.id);
+    return response.status(200).send('1');
+  });
 };
