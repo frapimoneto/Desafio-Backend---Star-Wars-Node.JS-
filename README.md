@@ -22,7 +22,7 @@ Essa API é permite o cadastramento, listagem e exclusão de planetas dos filmes
   $git clone https://github.com/frapimoneto/Desafio-Backend---Star-Wars-Node.JS-
   $cd Desafio-Backend---Star-Wars-Node.JS-
   $yarn
-  $yarn start
+  $yarn dev
 ```
 
 Feito com ❤ por Francisco Pinto Moreira Neto 😃 [Get in touch!](https://github.com/frapimoneto)
